@@ -4,44 +4,53 @@
     box-sizing:border-box;
 }
 
+:root{
+    --principal:#2f9f9a;
+    --principal-oscuro:#1f6f6b;
+    --texto:#23313f;
+    --gris:#7b8491;
+    --fondo:#f7f8f8;
+    --borde:#d9e2e2;
+}
+
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:#f4f7fa;
-    color:#333;
-    padding:30px 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    background:var(--fondo);
+    color:var(--texto);
+    padding:35px 15px;
 }
 
 .container{
-    max-width:900px;
+    max-width:980px;
     margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    background:#ffffff;
+    padding:42px;
+    border-radius:6px;
+    border:1px solid var(--borde);
+    box-shadow:none;
 }
 
 h1{
-    text-align:center;
-    color:#1b365d;
-    margin-bottom:20px;
+    text-align:left;
+    color:var(--texto);
+    margin-bottom:12px;
+    font-size:30px;
+    border-bottom:3px solid var(--principal);
+    padding-bottom:14px;
 }
 
-h2{
-    color:#1b365d;
+h2,h3{
+    color:var(--texto);
+    margin-top:28px;
     margin-bottom:15px;
-}
-
-h3{
-    margin-top:25px;
-    margin-bottom:15px;
-    color:#1b365d;
 }
 
 .small{
-    font-size:14px;
-    color:#666;
-    margin-bottom:25px;
-    line-height:1.6;
+    font-family:'Segoe UI', Arial, sans-serif;
+    font-size:15px;
+    color:var(--gris);
+    margin-bottom:28px;
+    line-height:1.7;
 }
 
 input[type="text"],
@@ -49,53 +58,63 @@ input[type="email"],
 input[type="number"],
 input:not([type="radio"]):not([type="checkbox"]){
     width:100%;
-    padding:12px;
+    padding:13px;
     margin-bottom:15px;
-    border:1px solid #d9d9d9;
-    border-radius:8px;
+    border:1px solid var(--borde);
+    border-radius:4px;
     font-size:15px;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#fff;
 }
 
 input:focus{
     outline:none;
-    border-color:#1b365d;
+    border-color:var(--principal);
 }
 
 .consentimiento{
     display:block;
-    margin:20px 0;
+    margin:22px 0;
     line-height:1.6;
+    font-family:'Segoe UI', Arial, sans-serif;
+    color:var(--gris);
 }
 
 .item{
-    border:1px solid #e5e5e5;
-    border-radius:10px;
-    padding:20px;
-    margin-bottom:20px;
-    background:#fafafa;
+    border:1px solid var(--borde);
+    border-radius:6px;
+    padding:22px 24px;
+    margin-bottom:18px;
+    background:#ffffff;
 }
 
 .item h4{
-    margin-bottom:15px;
-    color:#1b365d;
+    margin-bottom:16px;
+    color:var(--texto);
+    font-size:19px;
+    border-left:4px solid var(--principal);
+    padding-left:10px;
 }
 
 .item label{
     display:block;
-    margin-bottom:10px;
+    margin-bottom:11px;
     cursor:pointer;
     line-height:1.5;
+    font-family:'Segoe UI', Arial, sans-serif;
+    color:#2f3b46;
 }
 
 .item input[type="radio"]{
-    margin-right:8px;
+    margin-right:9px;
+    accent-color:var(--principal);
 }
 
 canvas{
     width:100%;
     height:180px;
-    border:2px solid #cfd8dc;
-    border-radius:10px;
+    border:1px solid var(--borde);
+    border-radius:6px;
     background:white;
     margin-bottom:15px;
 }
@@ -103,18 +122,23 @@ canvas{
 button{
     width:100%;
     padding:14px;
-    border:none;
-    border-radius:8px;
-    background:#1b365d;
-    color:white;
-    font-size:16px;
+    border:2px solid var(--principal);
+    border-radius:4px;
+    background:white;
+    color:var(--principal-oscuro);
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:.5px;
     cursor:pointer;
     margin-top:10px;
     transition:.3s;
+    text-transform:uppercase;
+    font-family:'Segoe UI', Arial, sans-serif;
 }
 
 button:hover{
-    background:#274b82;
+    background:var(--principal);
+    color:white;
 }
 
 .success{
@@ -123,18 +147,22 @@ button:hover{
 }
 
 .success h2{
-    margin-bottom:15px;
+    color:var(--texto);
 }
 
 .success p{
     font-size:16px;
-    color:#555;
+    color:var(--gris);
+    font-family:'Segoe UI', Arial, sans-serif;
 }
 
 @media(max-width:768px){
+    body{
+        padding:15px;
+    }
 
     .container{
-        padding:20px;
+        padding:24px;
     }
 
     h1{
@@ -142,11 +170,6 @@ button:hover{
     }
 
     .item{
-        padding:15px;
+        padding:16px;
     }
-
-    button{
-        font-size:15px;
-    }
-
 }
