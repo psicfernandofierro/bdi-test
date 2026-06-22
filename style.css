@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f7fa;
+    color:#333;
+    padding:30px 15px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    color:#1b365d;
+    margin-bottom:20px;
+}
+
+h2{
+    color:#1b365d;
+    margin-bottom:15px;
+}
+
+h3{
+    margin-top:25px;
+    margin-bottom:15px;
+    color:#1b365d;
+}
+
+.small{
+    font-size:14px;
+    color:#666;
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input:not([type="radio"]):not([type="checkbox"]){
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #d9d9d9;
+    border-radius:8px;
+    font-size:15px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#1b365d;
+}
+
+.consentimiento{
+    display:block;
+    margin:20px 0;
+    line-height:1.6;
+}
+
+.item{
+    border:1px solid #e5e5e5;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:20px;
+    background:#fafafa;
+}
+
+.item h4{
+    margin-bottom:15px;
+    color:#1b365d;
+}
+
+.item label{
+    display:block;
+    margin-bottom:10px;
+    cursor:pointer;
+    line-height:1.5;
+}
+
+.item input[type="radio"]{
+    margin-right:8px;
+}
+
+canvas{
+    width:100%;
+    height:180px;
+    border:2px solid #cfd8dc;
+    border-radius:10px;
+    background:white;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#1b365d;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#274b82;
+}
+
+.success{
+    display:none;
+    text-align:center;
+}
+
+.success h2{
+    margin-bottom:15px;
+}
+
+.success p{
+    font-size:16px;
+    color:#555;
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:20px;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    .item{
+        padding:15px;
+    }
+
+    button{
+        font-size:15px;
+    }
+
+}

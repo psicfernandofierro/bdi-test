@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluación de Depresión</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container" id="formulario">
+    <h1>Evaluación de Depresión</h1>
+
+    <p class="small">
+      Este instrumento será revisado únicamente por el profesional tratante.
+      El resultado no será mostrado automáticamente al paciente.
+    </p>
+
+    <input id="nombre" placeholder="Nombre completo" required>
+    <input id="email" placeholder="Correo electrónico" required>
+    <input id="edad" type="number" placeholder="Edad" required>
+    <input id="pais" placeholder="País" required>
+
+    <label class="consentimiento">
+      <input type="checkbox" id="consentimiento">
+      Acepto completar esta evaluación y autorizo el envío de mis respuestas al profesional tratante.
+    </label>
+
+    <div id="items"></div>
+
+    <h3>Firma del paciente</h3>
+    <canvas id="firma"></canvas>
+
+    <button type="button" onclick="limpiarFirma()">Limpiar firma</button>
+    <button type="button" onclick="enviarFormulario()">Enviar evaluación</button>
+  </div>
+
+  <div class="container success" id="gracias">
+    <h2>Gracias por completar la evaluación.</h2>
+    <p>Los resultados serán revisados por su profesional de salud mental.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
